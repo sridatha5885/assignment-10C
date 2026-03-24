@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="app">
+
+<form name="f" ng-controller="c">
+
+Email: <input type="email" name="e" ng-model="mail" required>
+
+<span ng-show="f.e.$dirty && f.e.$invalid">
+Invalid Email
+</span>
+
+<span ng-show="f.e.$valid">
+Valid Email
+</span>
+
+</form>
+
+<script>
+var a = angular.module("app", []);
+a.controller("c", function($scope){});
+</script>
+
+</body>
+</html>
